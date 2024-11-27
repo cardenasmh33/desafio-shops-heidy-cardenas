@@ -1,0 +1,100 @@
+.search-bar {
+    background-color: #FFE600;
+    display: flex;
+    justify-content: center;
+
+    .search-bar-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 8px;
+        width: 100%;
+
+        .bar-icon {
+            width: 100px;
+            margin-right: 16px;
+            cursor: pointer;
+        }
+
+        .search-box {
+            width: 100%;
+            height: 100%;
+            display: flex;
+
+            .search-box-input {
+                border: 1px solid #EBEBEB;
+                border-right: none;
+                width: 100%;
+                text-indent: 8px;
+                font-family: 'Proxima Nova';
+                font-size: 16px;
+                color: rgba(0, 0, 0, 0.55);
+                font-weight: 400;
+
+                &:focus {
+                    outline: none;
+                }
+            }
+
+            .search-box-button {
+                display: flex;
+                align-items: center;
+                background-color: field;
+                border: 1px solid #EBEBEB;
+                border-left: none;
+                position: relative;
+                padding: 0 8px;
+
+                .search-icon {
+                    width: 16px;
+                }
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    left: 0;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    width: 1px;
+                    height: 16px;
+                    background-color: #EBEBEB;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .search-bar {
+        .search-bar-container {
+            width: 1200px;
+
+            .bar-icon {
+                width: 148px;
+                margin-right: 34px;
+                cursor: pointer;
+            }
+
+            .search-box {
+                width: 1018px;
+
+                .search-box-input {
+                    text-indent: 16px;
+                }
+
+                .search-box-button {
+                    padding: 0 16px;
+                    cursor: pointer;
+
+                    .search-icon {
+                        width: 20px;
+                    }
+
+                    &::before {
+                        height: 20px;
+                    }
+                }
+            }
+        }
+    }
+}

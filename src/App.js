@@ -1,11 +1,16 @@
-import './App.scss';
+import { BrowserRouter } from "react-router";
+
+import SearchBar from './components/SearchBar';
+import './App.scss'
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header"></header>
+      <BrowserRouter>
+        <header className="App-header"><SearchBar /></header>
+        <div className="App-container"></div>
+      </BrowserRouter>
     </div>
   );
 }
-
 export default App;
