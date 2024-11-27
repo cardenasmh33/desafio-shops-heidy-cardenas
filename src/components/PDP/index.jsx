@@ -89,8 +89,8 @@ function ProductDetailPage(props) {
                 <div className="product-description">
                     <h2 className="description-title">Descripción</h2>
                     <p className="description-content">
-                        {itemDescription.map((partialDescription) => (
-                            <span className="description">{partialDescription}< br /></span>
+                        {itemDescription.map((partialDescription, index) => (
+                            <span key={index} className="description">{partialDescription}< br /></span>
                         ))}
                     </p>
                 </div>
